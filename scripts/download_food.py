@@ -1,6 +1,7 @@
 import bs4
 import requests
 import os
+import PIL.Image
 os.system("rmdir /s /q public\\food_img")
 os.system("mkdir public")
 os.system("mkdir public\\food_img")
@@ -30,3 +31,10 @@ for i in range(1000):
         imgresp = requests.get(base+"/"+imgpath.strip("/."), verify=False)
         with open(f"public/food_img/{title}_{year}-{mon}-{day}.png", "wb") as f:
             f.write(imgresp.content)
+        try:
+            img = PIL.Image.open(f"public/food_img/{title}_{year}-{mon}-{day}.png")
+            if img.width < img.height:
+                img = img.rotate(90)
+            img.save(f"public/food_img/{title}_{year}-{mon}-{day}.png")
+        except:
+            os.remove(f"public/food_img/{title}_{year}-{mon}-{day}.png")
