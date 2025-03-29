@@ -17,8 +17,8 @@ hero:
       text: 热门话题
       link: /hot
     - theme: sponsor
-      text: 关于我们
-      link: /about
+      text: Github
+      link: https://github.com/apkqiu/apkqiu.github.io
 
 features:
   - icon: 📰
