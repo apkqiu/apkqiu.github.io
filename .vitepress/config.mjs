@@ -17,10 +17,10 @@ export default defineConfig({
         ],
         sidebar: [
             {
-                text: "",
+                text: "2025年",
                 collapsed: false,
                 items: [
-                    { text: "", link: "" },
+                    { text: "2月23日", link: "/newspaper/2025-02-23" },
                 ]
             },
         ],
