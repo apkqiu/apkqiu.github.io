@@ -38,3 +38,13 @@ for i in range(1000):
             img.save(f"public/food_img/{title}_{year}-{mon}-{day}.png")
         except:
             os.remove(f"public/food_img/{title}_{year}-{mon}-{day}.png")
+            continue
+        open("src/hot/food/index.md", "a").write(f"[{title}]({year}-{mon}-{day})")
+        open(f"src/hot/food/{year}-{mon}-{day}.md","w").write(
+f"""
+# {title}
+
+![img](https://raw.githubusercontent.com/apkqiu/apkqiu.github.io/main/public/food_img/{title}_{year}-{mon}-{day}.png)
+
+> 信息仅供参考，请以官网为准
+""")
