@@ -6,7 +6,7 @@ import base64
 os.system("rmdir /s /q public\\food_img")
 os.system("mkdir public")
 os.system("mkdir public\\food_img")
-open("src/hot/food/index.md", "w").write("# 一周食谱\n\n")
+open("src/hot/food/index.md", "w",encoding="utf-8").write("# 一周食谱\n\n")
 base = "http://sz1cz.gusuedu.cn/"
 for i in range(1000):
     if i == 0:
