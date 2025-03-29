@@ -3,20 +3,40 @@
 layout: home
 
 hero:
-  name: "惠阴校园"
-  text: ""
-  tagline: Made by vitepress
-  # actions:
-  #   # - theme: brand
-  #   #   text: 主题色
-  #   #   link: example.com
+  name: VitePress
+  text: Vite & Vue powered static site generator.
+  tagline: Lorem ipsum...
+  image:
+    src: /logo.png
+    alt: VitePress
+  actions:
+    - theme: brand
+      text: Get Started
+      link: /guide/what-is-vitepress
+    - theme: alt
+      text: View on GitHub
+      link: https://github.com/vuejs/vitepress
 
-  #   # - theme: alt
-  #   #   text: 默认色
-  #   #   link: example.com
+features:
+  - icon: 🛠️
+    title: Simple and minimal, always
+    details: Lorem ipsum...
+  - icon:
+      src: /cool-feature-icon.svg
+    title: Another cool feature
+    details: Lorem ipsum...
+  - icon:
+      dark: /dark-feature-icon.svg
+      light: /light-feature-icon.svg
+    title: Another cool feature
+    details: Lorem ipsum...
+---
 
-# features:
-#   - title: 标题
-#     details: 描述
-#     link: example.com
+## Getting Started
 
+You can get started using VitePress right away using `npx`!
+
+```sh
+npm init
+npx vitepress init
+```

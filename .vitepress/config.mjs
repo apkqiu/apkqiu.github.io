@@ -41,6 +41,26 @@ export default defineConfig({
         },
         search: {
             provider: "local",
+            options: {
+                locales: {
+                    zh: {
+                        translations: {
+                            button: {
+                                buttonText: '搜索',
+                                buttonAriaLabel: '搜索'
+                            },
+                            modal: {
+                                noResultsText: '无结果',
+                                resetButtonTitle: '清除',
+                                footer: {
+                                    selectText: '选择',
+                                    navigateText: '切换'
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         },
         footer: {
             message: "没意思的网站",
