@@ -2,10 +2,11 @@ import bs4
 import requests
 import os
 import PIL.Image, PIL.ImageTransform
+import base64
 os.system("rmdir /s /q public\\food_img")
 os.system("mkdir public")
 os.system("mkdir public\\food_img")
-open("src/hot/food/index.md", "w").close()
+open("src/hot/food/index.md", "w").write("# 一周食谱\n\n")
 base = "http://sz1cz.gusuedu.cn/"
 for i in range(1000):
     if i == 0:
@@ -40,12 +41,12 @@ for i in range(1000):
         except:
             os.remove(f"public/food_img/{title}_{year}-{mon}-{day}.png")
             continue
-        open("src/hot/food/index.md", "a", encoding="utf-8").write(f"[{title}]({year}-{mon}-{day})\n")
+        open("src/hot/food/index.md", "a", encoding="utf-8").write(f"- [{title}]({year}-{mon}-{day})\n")
         open(f"src/hot/food/{year}-{mon}-{day}.md","w",encoding="utf-8").write(
 f"""
 # {title}
 
-![img](https://raw.githubusercontent.com/apkqiu/apkqiu.github.io/main/public/food_img/{title}_{year}-{mon}-{day}.png)
+![img](data:image/png;base64,{base64.b64encode(open(f"public/food_img/{title}_{year}-{mon}-{day}.png", "rb").read()).decode('utf-8')})
 
 > 信息仅供参考，请以官网为准
 """)
