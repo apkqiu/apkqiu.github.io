@@ -3,8 +3,8 @@
 layout: home
 
 hero:
-  name: "惠阴校园一角"
-  text: "周恩来报社"
+  name: "标题"
+  text: "副标题"
   tagline: Made by vitepress
   actions:
     - theme: brand

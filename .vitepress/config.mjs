@@ -5,8 +5,8 @@ import { defineConfig } from "vitepress";
 export default defineConfig({
     srcDir: "src",
     lang: "zh-Hans",
-    title: "破烂网站",
-    description: "破烂网站",
+    title: "标题",
+    description: "描述",
     sitemap: {
         hostname: "https://apkqiu.github.io"
     },
