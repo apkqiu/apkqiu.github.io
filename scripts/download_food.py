@@ -1,7 +1,7 @@
 import bs4
 import requests
 import os
-import PIL.Image
+import PIL.Image, PIL.ImageTransform
 os.system("rmdir /s /q public\\food_img")
 os.system("mkdir public")
 os.system("mkdir public\\food_img")
@@ -34,7 +34,7 @@ for i in range(1000):
         try:
             img = PIL.Image.open(f"public/food_img/{title}_{year}-{mon}-{day}.png")
             if img.width < img.height:
-                img = img.rotate(90)
+                img = img.transpose(PIL.Image.Transpose.ROTATE_90)
             img.save(f"public/food_img/{title}_{year}-{mon}-{day}.png")
         except:
             os.remove(f"public/food_img/{title}_{year}-{mon}-{day}.png")
