@@ -40,8 +40,8 @@ for i in range(1000):
         except:
             os.remove(f"public/food_img/{title}_{year}-{mon}-{day}.png")
             continue
-        open("src/hot/food/index.md", "a").write(f"[{title}]({year}-{mon}-{day})\n")
-        open(f"src/hot/food/{year}-{mon}-{day}.md","w").write(
+        open("src/hot/food/index.md", "a", encoding="utf-8").write(f"[{title}]({year}-{mon}-{day})\n")
+        open(f"src/hot/food/{year}-{mon}-{day}.md","w",encoding="utf-8").write(
 f"""
 # {title}
 
