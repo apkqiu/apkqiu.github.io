@@ -1,9 +1,9 @@
 import bs4
 import requests
 import os
-os.system("rmdir /s /q src\\food_img")
-os.system("mkdir src")
-os.system("mkdir src\\food_img")
+os.system("rmdir /s /q public\\food_img")
+os.system("mkdir public")
+os.system("mkdir public\\food_img")
 base = "http://sz1cz.gusuedu.cn/"
 for i in range(1000):
     if i == 0:
@@ -28,5 +28,5 @@ for i in range(1000):
             "#vsb_content > div > p:nth-child(1) > img").attrs["src"]
         print(imgpath)
         imgresp = requests.get(base+"/"+imgpath.strip("/."), verify=False)
-        with open(f"src/food_img/{title}_{year}-{mon}-{day}.png", "wb") as f:
+        with open(f"public/food_img/{title}_{year}-{mon}-{day}.png", "wb") as f:
             f.write(imgresp.content)
