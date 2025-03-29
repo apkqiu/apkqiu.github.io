@@ -5,6 +5,7 @@ import PIL.Image, PIL.ImageTransform
 os.system("rmdir /s /q public\\food_img")
 os.system("mkdir public")
 os.system("mkdir public\\food_img")
+open("src/hot/food/index.md", "w").close()
 base = "http://sz1cz.gusuedu.cn/"
 for i in range(1000):
     if i == 0:
@@ -39,7 +40,7 @@ for i in range(1000):
         except:
             os.remove(f"public/food_img/{title}_{year}-{mon}-{day}.png")
             continue
-        open("src/hot/food/index.md", "a").write(f"[{title}]({year}-{mon}-{day})")
+        open("src/hot/food/index.md", "a").write(f"[{title}]({year}-{mon}-{day})\n")
         open(f"src/hot/food/{year}-{mon}-{day}.md","w").write(
 f"""
 # {title}
