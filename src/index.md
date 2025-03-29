@@ -11,25 +11,25 @@ hero:
     alt: Newspaper
   actions:
     - theme: brand
-      text: Get Started
-      link: /guide/what-is-vitepress
+      text: 进入报社
+      link: /newspaper
     - theme: alt
-      text: View on GitHub
-      link: https://github.com/vuejs/vitepress
+      text: 热门话题
+      link: /hot
 
 features:
-  - icon: 🛠️
-    title: Simple and minimal, always
-    details: Lorem ipsum...
-  - icon:
-      src: /cool-feature-icon.svg
-    title: Another cool feature
-    details: Lorem ipsum...
-  - icon:
-      dark: /dark-feature-icon.svg
-      light: /light-feature-icon.svg
-    title: Another cool feature
-    details: Lorem ipsum...
+  - icon: 📰
+    title: 班级热点
+    details: 班级最近有什么有趣的新闻？
+    link: /hot/class
+  - icon: 🏫
+    title: 学校新闻
+    details: 学校最近有什么新鲜事？
+    link: /hot/school
+  - icon: 🍴
+    title: 一周食谱
+    details: 这一周吃什么？有冰红茶？还是菠萝古老肉？
+    link: /hot/food
 ---
 
 ## Getting Started
