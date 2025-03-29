@@ -13,16 +13,28 @@ export default defineConfig({
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
         nav: [
-            { text: "“周恩来”报社", link: "/newspaper/index", activeMatch: "/newspaper" },
+            { text: "“周恩来”报社", link: "/newspaper", activeMatch: "/newspaper" },
+            { text: "热门话题", link: "/hot", activeMatch: "/hot" },
         ],
         sidebar: [
             {
-                text: "2025年",
+                text: "报社",
                 collapsed: false,
                 items: [
-                    { text: "2月23日", link: "/newspaper/2025-02-23" },
+                    { text: "索引", link: "/newspaper" },
+                    { text: "2025年2月23日", link: "/newspaper/2025-02-23" },
                 ]
             },
+            {
+                text: "热门话题",
+                collapsed: false,
+                items: [
+                    { text: "索引", link: "/hot" },
+                    { text: "班级新闻", link: "/hot/class" },
+                    { text: "校园生活", link: "/hot/school" },
+                    { text: "一周食谱", link: "/hot/food" },
+                ]
+            }
         ],
         editLink: {
             pattern: "https://github.com/apkqiu/apkqiu.github.io/edit/main/src/:path",
