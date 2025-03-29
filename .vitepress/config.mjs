@@ -5,7 +5,7 @@ import { defineConfig } from "vitepress";
 export default defineConfig({
     srcDir: "src",
     lang: "zh-Hans",
-    title: "标题",
+    title: "惠阴校园",
     description: "描述",
     sitemap: {
         hostname: "https://apkqiu.github.io"
@@ -13,7 +13,7 @@ export default defineConfig({
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
         nav: [
-            { text: "", link: "", activeMatch: "" },
+            { text: "“周恩来”报社", link: "/newspaper/index", activeMatch: "/newspaper" },
         ],
         sidebar: [
             {
