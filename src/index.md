@@ -3,12 +3,12 @@
 layout: home
 
 hero:
-  name: VitePress
-  text: Vite & Vue powered static site generator.
-  tagline: Lorem ipsum...
+  name: “周恩来”报社
+  text: 惠阴校园中你不知道的事情
+  tagline: 其实是个个人小网站而已
   image:
-    src: /logo.png
-    alt: VitePress
+    src: 📰
+    alt: Newspaper
   actions:
     - theme: brand
       text: Get Started
