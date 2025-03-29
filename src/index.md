@@ -16,6 +16,9 @@ hero:
     - theme: alt
       text: 热门话题
       link: /hot
+    - theme: sponsor
+      text: 关于我们
+      link: /about
 
 features:
   - icon: 📰
