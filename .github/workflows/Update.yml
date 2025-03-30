@@ -32,9 +32,22 @@ jobs:
           node-version: 20
           cache: npm
 
-      # 只有结果是''时才执行
+      - name: Setup Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.13'
+
       - name: Install dependencies
-        run: npm i
+        run: |
+          npm ci
+          pip install -r requirements.txt
+      
+      - name: Update Information
+        run: python scripts/update_information.py
+      
+      - name: Compile Images
+        run: python scripts/compile_dataurl.py
+          
 
       - name: Build with VitePress
         run: |

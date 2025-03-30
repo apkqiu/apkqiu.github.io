@@ -5,11 +5,10 @@ import PIL.Image, PIL.ImageTransform
 import base64
 import json
 # 获取一周食谱
-os.system("rmdir /s /q public\\food_img")
-os.system("mkdir public")
-os.system("mkdir public\\food_img")
+os.system("rmdir /s /q assets\\food_img")
+os.system("mkdir assets\\food_img")
 config = {"food_items":[]}
-open("src/hot/food/index.md", "w",encoding="utf-8").write("# 一周食谱\n\n")
+open("docs/hot/food/index.md", "w",encoding="utf-8").write("# 一周食谱\n\n")
 base = "http://sz1cz.gusuedu.cn/"
 for i in range(1000):
     if i == 0:
@@ -34,22 +33,22 @@ for i in range(1000):
             "#vsb_content > div > p:nth-child(1) > img").attrs["src"]
         print(imgpath)
         imgresp = requests.get(base+"/"+imgpath.strip("/."), verify=False)
-        with open(f"public/food_img/{title}_{year}-{mon}-{day}.png", "wb") as f:
+        with open(f"assets/food_img/{title}_{year}-{mon}-{day}.png", "wb") as f:
             f.write(imgresp.content)
         try:
-            img = PIL.Image.open(f"public/food_img/{title}_{year}-{mon}-{day}.png")
+            img = PIL.Image.open(f"assets/food_img/{title}_{year}-{mon}-{day}.png")
             if img.width < img.height:
                 img = img.transpose(PIL.Image.Transpose.ROTATE_90)
-            img.save(f"public/food_img/{title}_{year}-{mon}-{day}.png")
+            img.save(f"assets/food_img/{title}_{year}-{mon}-{day}.png")
         except:
-            os.remove(f"public/food_img/{title}_{year}-{mon}-{day}.png")
+            os.remove(f"assets/food_img/{title}_{year}-{mon}-{day}.png")
             continue
-        open("src/hot/food/index.md", "a", encoding="utf-8").write(f"- [{title}]({year}-{mon}-{day})\n")
-        open(f"src/hot/food/{year}-{mon}-{day}.md","w",encoding="utf-8").write(
+        open("docs/hot/food/index.md", "a", encoding="utf-8").write(f"- [{title}]({year}-{mon}-{day})\n")
+        open(f"docs/hot/food/{year}-{mon}-{day}.md","w",encoding="utf-8").write(
 f"""
 # {title}
 
-![img](data:image/png;base64,{base64.b64encode(open(f"public/food_img/{title}_{year}-{mon}-{day}.png", "rb").read()).decode('utf-8')})
+![img](assets/food_img/{title}_{year}-{mon}-{day}.png)
 
 > 信息仅供参考，请以官网为准
 """)
