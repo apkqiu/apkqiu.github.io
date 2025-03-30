@@ -32,12 +32,26 @@ jobs:
           node-version: 20
           cache: npm
 
+      # 根据 key 判断是否命中 node_modules
+      - name: Cache Node Modules
+        id: cache-node-modules
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: node-modules-${{ runner.os }}-${{ matrix.node-version }}-${{ hashFiles('package-lock.json') }}
+
+      # true代表缓存命中，node_modules没有变化，而''代表没有命中，node_modules发生变化
+      - name: Cache Hit
+        run: echo "${{ steps.cache-node-modules.outputs.cache-hit }}"
+
+      # 只有结果是''时才执行
       - name: Install dependencies
-        run: npm i --include=dev
+        if: steps.cache-node-modules.outputs.cache-hit == ''
+        run: npm ci
 
       - name: Build with VitePress
         run: |
-          npm run docs:build
+          npm run build
           touch .vitepress/dist/.nojekyll
 
       - name: Deploy to GitHub Pages
