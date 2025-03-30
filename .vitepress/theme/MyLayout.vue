@@ -31,7 +31,7 @@ onMounted(() => {
                         const gitment = new Gitalk({
                             id: route.data.title, // 可选，推荐设置为页面标题，因为会作为标签传给Github issues，且issues标签有长度限制。
                             owner: "apkqiu", // GitHub repository 所有者
-                            repo: "vite-press", // GitHub repository
+                            repo: "apkqiu/apkqiu.github.io", // GitHub repository
                             clientID: "Ov23liWD7Nt1jIM8JIQ3", // 自己的clientID
                             clientSecret: "06435b4d81cea25e3b7f64ab5c6ceefba29d43db", // 自己的clientSecret
                             admin: ["apkqiu"], // GitHub repository 所有者
