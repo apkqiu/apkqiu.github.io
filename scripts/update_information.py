@@ -3,9 +3,12 @@ import requests
 import os
 import PIL.Image, PIL.ImageTransform
 import base64
+import json
+# 获取一周食谱
 os.system("rmdir /s /q public\\food_img")
 os.system("mkdir public")
 os.system("mkdir public\\food_img")
+config = {"food_items":[]}
 open("src/hot/food/index.md", "w",encoding="utf-8").write("# 一周食谱\n\n")
 base = "http://sz1cz.gusuedu.cn/"
 for i in range(1000):
@@ -50,3 +53,14 @@ f"""
 
 > 信息仅供参考，请以官网为准
 """)
+        config["food_items"].append({ "text": title, "link": f"/hot/food/{year}-{mon}-{day}" })
+        
+# parse template
+with open(".vitepress/config.template.mjs",encoding="utf-8") as f:
+    cont = f.read()
+for key,value in config.items():
+    s = json.dumps(value)
+    cont = cont.replace(f"[[!!{key}]]", s)
+
+with open(".vitepress/config.mjs", "w", encoding="utf-8") as f:
+    f.write(cont)
