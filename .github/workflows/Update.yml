@@ -27,6 +27,7 @@ jobs:
           fetch-depth: 0 # 如果未启用 lastUpdated，则不需要
 
   setup-node:
+    needs: checkout
     runs-on: ubuntu-latest
     steps:
       - name: Setup Node
@@ -37,6 +38,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
   setup-python:
+    needs: checkout
     runs-on: ubuntu-latest
     steps:
       - name: Setup Python
@@ -46,7 +48,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
   build:
-    needs: [checkout, setup-node, setup-python]
+    needs: [setup-node, setup-python]
     runs-on: ubuntu-latest
     steps:
       - name: Compile images in markdown
