@@ -17,7 +17,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  setup-node:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -29,37 +29,22 @@ jobs:
         with:
           node-version: 20
           cache: npm
-      - name: Install dependencies
-        run: npm ci
-  setup-python:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0 # 如果未启用 lastUpdated，则不需要
       - name: Setup Python
         uses: actions/setup-python@v3
         with:
-          python-version: '3.13'
-      - name: Install dependencies
+          python-version: "3.13"
+      - name: Install Nodejs dependencies
+        run: npm ci
+      - name: Install Python dependencies
         run: pip install -r requirements.txt
-  build:
-    needs: [setup-node, setup-python]
-    runs-on: ubuntu-latest
-    steps:
       - name: Compile images in markdown
         run: python scripts/compile_dataurl.py
       - name: Build with VitePress
-        run: |
-          npm run build
-          touch .vitepress/dist/.nojekyll
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
+        run: npm run build
+      - name: Disable Jekyll
+        run: touch .vitepress/dist/.nojekyll
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-            branch: gh-pages
-            folder: .vitepress/dist
+          branch: gh-pages
+          folder: .vitepress/dist
