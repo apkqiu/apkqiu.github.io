@@ -5,8 +5,8 @@
     "preview": "vitepress preview"
   },
   "dependencies": {
-    "gitalk": "^1.8.0",
-    "vitepress": "^1.6.3",
-    "vitepress-plugin-comment-with-giscus": "^1.1.15"
+    "gitalk": "1.8.0",
+    "vitepress": "1.6.3",
+    "vitepress-plugin-comment-with-giscus": "1.1.15"
   }
 }
