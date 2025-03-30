@@ -1,3 +1,5 @@
+# DO NOT RUN IN GITHUB ACTIONS
+
 import bs4
 import requests
 import os
@@ -5,6 +7,7 @@ import PIL.Image, PIL.ImageTransform
 import base64
 import json
 # 获取一周食谱
+
 os.system("rmdir /s /q assets\\food_img")
 os.system("mkdir assets\\food_img")
 config = {"food_items":[]}
