@@ -46,8 +46,7 @@ jobs:
         run: python scripts/update_information.py
       
       - name: Compile Images
-        run: python scripts/compile_dataurl.py
-          
+        run: python scripts/compile_dataurl.py 
 
       - name: Build with VitePress
         run: |
