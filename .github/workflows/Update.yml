@@ -51,7 +51,7 @@ jobs:
         run: python scripts/make_sidebar_tree.py
 
       - name: 构建
-        run: npm run vitepress build
+        run: npm run docs:build
 
       - name: 禁止 Jekyll
         run: touch .vitepress/dist/.nojekyll
