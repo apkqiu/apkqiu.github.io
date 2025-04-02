@@ -49,9 +49,9 @@ jobs:
 
       - name: 处理文档中的侧边栏
         run: python scripts/make_sidebar_tree.py
-        
+
       - name: 构建
-        run: npm run build
+        run: npm run vitepress build
 
       - name: 禁止 Jekyll
         run: touch .vitepress/dist/.nojekyll
