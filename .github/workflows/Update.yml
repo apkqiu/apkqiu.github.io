@@ -39,7 +39,7 @@ jobs:
           python-version: "3.13"
 
       - name: 安装Node.js依赖
-        run: npm ci
+        run: npm i
 
       - name: 安装Python依赖
         run: pip install -r requirements.txt
