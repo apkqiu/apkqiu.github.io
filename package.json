@@ -1,12 +1,12 @@
 {
   "scripts": {
-    "run": "vitepress dev",
-    "build": "vitepress build",
-    "preview": "vitepress preview"
+    "docs:run": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
   },
   "dependencies": {
-    "gitalk": "1.8.0",
-    "vitepress": "1.6.3",
-    "vitepress-plugin-comment-with-giscus": "1.1.15"
+    "giscus": "^1.6.0",
+    "vitepress": "^1.6.3",
+    "vitepress-plugin-comment-with-giscus": "^1.1.15"
   }
 }

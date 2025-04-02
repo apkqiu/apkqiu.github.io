@@ -2,9 +2,19 @@ import base64,os,re
 
 regex = re.compile(r'!\[.*?\]\((.*?)\)')
 
+limit = {
+    "opera": 64*1024-22,
+    "firefox<97": 256*1024*1024-22,
+    "firefox": 32*1024*1024-22,
+    "chrome": 512*1024*1024-22,
+    "webkit": 2048*1024*1024-22
+}
+
 def image_to_dataurl(image_path):
     with open(image_path, 'rb') as image_file:
         encoded_string = base64.b64encode(image_file.read()).decode('utf-8')
+        if len(encoded_string) > limit["chrome"]:
+            return "https://raw.githubusercontent.com/apkqiu/apkqiu.github.io/refs/heads/main/"+image_path
         return f'data:image/png;base64,{encoded_string}'
 
 

@@ -17,33 +17,46 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+
   build:
+    name: 构建并发布
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+      - name: 迁出分支
+        uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # 如果未启用 lastUpdated，则不需要
-      - name: Setup Node
-        uses: actions/setup-node@v3
+          fetch-depth: 0
+
+      - name: 初始化Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
-      - name: Setup Python
-        uses: actions/setup-python@v3
+
+      - name: 初始化Python 3.13
+        uses: actions/setup-python@v4
         with:
           python-version: "3.13"
-      - name: Install Nodejs dependencies
+
+      - name: 安装Node.js依赖
         run: npm ci
-      - name: Install Python dependencies
+
+      - name: 安装Python依赖
         run: pip install -r requirements.txt
-      - name: Compile images in markdown
+
+      - name: 处理文档中的图片
         run: python scripts/compile_dataurl.py
-      - name: Build with VitePress
+
+      - name: 处理文档中的侧边栏
+        run: python scripts/make_sidebar_tree.py
+        
+      - name: 构建
         run: npm run build
-      - name: Disable Jekyll
+
+      - name: 禁止 Jekyll
         run: touch .vitepress/dist/.nojekyll
-      - name: Deploy to GitHub Pages
+
+      - name: 发布
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
