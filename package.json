@@ -8,5 +8,9 @@
     "giscus": "^1.6.0",
     "vitepress": "^1.6.3",
     "vitepress-plugin-comment-with-giscus": "^1.1.15"
+  },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "*"
   }
+
 }
