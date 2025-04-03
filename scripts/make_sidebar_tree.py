@@ -57,26 +57,36 @@ def make_tree(dir):
 
         return {
             "text": index_title,
-            "link": f"{dir.replace('docs/', '', 1)}/index.md"
+            "link": f"{dir.replace('docs/', '', 1)}"
         }
 
     return {
         "text": index_title,
         "items": current_tree,
         "collapsed": True,
-        "link": f"{dir.replace('docs/', '', 1)}/index.md"
+        "link": f"{dir.replace('docs/', '', 1)}"
     }
 
 
 tree = make_tree("docs")["items"]
+nav = []
 for key in range(len(tree)):
     if tree[key].get("collapsed"):
         tree[key]["collapsed"] = False
+
+for key in range(len(tree)):
+    nav.append({
+        "text": tree[key]["text"],
+        "link": tree[key]["link"],
+        "activeMatch": tree[key]["link"]
+    })
     
 str = json.dumps(tree)
+navstr = json.dumps(nav)
 print(str)
 with open(".vitepress/config.template.mjs", encoding="utf-8") as f:
     content = f.read()
     content = content.replace("[!!sidebar_tree]", str)
+    content = content.replace("[!!nav]", navstr)
     with open(".vitepress/config.mjs", "w", encoding="utf-8") as f:
         f.write(content)

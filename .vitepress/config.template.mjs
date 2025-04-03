@@ -12,10 +12,7 @@ export default defineConfig({
     },
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
-        nav: [
-            { text: "“周恩来”报社", link: "/newspaper", activeMatch: "/newspaper" },
-            { text: "热门话题", link: "/hot", activeMatch: "/hot" },
-        ],
+        nav: [!!nav],
         sidebar: [!!sidebar_tree],
         editLink: {
             pattern: "https://github.com/apkqiu/apkqiu.github.io/edit/main/src/:path",
