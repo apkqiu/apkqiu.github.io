@@ -2,15 +2,23 @@ import DefaultTheme from 'vitepress/theme';
 import giscusTalk from 'vitepress-plugin-comment-with-giscus';
 import { useData, useRoute } from 'vitepress';
 import { toRefs } from "vue";
+import 'viewerjs/dist/viewer.min.css';
+import imageViewer from 'vitepress-plugin-image-viewer';
+import vImageViewer from 'vitepress-plugin-image-viewer/lib/vImageViewer.vue';
 
 export default {
     ...DefaultTheme,
     enhanceApp(ctx) {
         DefaultTheme.enhanceApp(ctx);
+        ctx.app.component('vImageViewer', vImageViewer);
+
     },
     setup() {
-        const { frontmatter } = toRefs(useData());
         const route = useRoute();
+        const { frontmatter } = toRefs(useData());
+        // 启用插件
+        imageViewer(route);
+
 
         giscusTalk(
             {

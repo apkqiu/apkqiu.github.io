@@ -3,7 +3,7 @@ import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-    srcDir: "src",
+    srcDir: "docs",
     lang: "zh-Hans",
     title: "惠阴校园",
     description: "描述",

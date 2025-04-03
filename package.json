@@ -7,10 +7,10 @@
   "dependencies": {
     "giscus": "^1.6.0",
     "vitepress": "^1.6.3",
-    "vitepress-plugin-comment-with-giscus": "^1.1.15"
+    "vitepress-plugin-comment-with-giscus": "^1.1.15",
+    "vitepress-plugin-image-viewer": "^1.1.6"
   },
   "optionalDependencies": {
     "@rollup/rollup-linux-x64-gnu": "*"
   }
-
 }
