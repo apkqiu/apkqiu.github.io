@@ -42,7 +42,7 @@ jobs:
         run: npm i --loglevel=verbose
 
       - name: 安装Python依赖
-        run: pip install -r requirements.txt
+        run: pip install -r requirements.txt --verbose
 
       - name: 处理文档中的图片
         run: python scripts/compile_dataurl.py
