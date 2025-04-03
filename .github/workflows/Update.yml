@@ -44,9 +44,6 @@ jobs:
       - name: 安装Python依赖
         run: pip install -r requirements.txt --verbose
 
-      - name: 处理文档中的图片
-        run: python scripts/compile_dataurl.py
-
       - name: 处理文档中的侧边栏
         run: python scripts/make_sidebar_tree.py
 
