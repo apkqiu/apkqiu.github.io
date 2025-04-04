@@ -34,12 +34,3 @@ features:
     details: 这一周吃什么？有冰红茶？还是菠萝古老肉？
     link: /hot/food
 ---
-
-## Getting Started
-
-You can get started using VitePress right away using `npx`!
-
-```sh
-npm init
-npx vitepress init
-```
