@@ -34,3 +34,43 @@ features:
     details: 这一周吃什么？有冰红茶？还是菠萝古老肉？
     link: /hot/food
 ---
+
+<script setup>
+import {
+  VPTeamPage,
+  VPTeamPageTitle,
+  VPTeamMembers
+} from 'vitepress/theme'
+
+const members = [
+  {
+    avatar: 'https://avatars.githubusercontent.com/u/83914008',
+    name: 'apkqiu',
+    title: '网站制作者',
+    links: [
+      { icon: 'github', link: 'https://github.com/apkqiu'},
+      { icon: 'x', link: 'https://twitter.com/apkqiu' },
+      { icon: 'wechat', link: 'weixin://contacts/profile/HasPingLink' },
+      { icon: 'qq' , link: 'tencent://message/?uin=1145328374' },
+      { icon: 'maildotru', link: 'mailto:apkqiu@qq.com' },
+      //{ icon: 'discord', link: 'https://discord.gg/' },
+    ]
+  },
+  {
+    avatar:"https://cn.cravatar.com/avatar/?d=mp&s=512",
+    name:"期待你的加入"
+  }
+]
+</script>
+
+<VPTeamPage>
+  <VPTeamPageTitle>
+    <template #title>
+      制作团队
+    </template>
+    <template #lead>
+      我们是一群热爱八卦的人，致力于为园中师生提供最新鲜的校园新闻。
+    </template>
+  </VPTeamPageTitle>
+  <VPTeamMembers :members="members"/>
+</VPTeamPage>
