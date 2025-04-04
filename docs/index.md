@@ -69,7 +69,7 @@ const members = [
       制作团队
     </template>
     <template #lead>
-      我们是一群热爱八卦的人，致力于为园中师生提供最新鲜的校园新闻。
+      我们是一群热爱八卦的人，喜欢分享学校新闻，喜欢分享美食。
     </template>
   </VPTeamPageTitle>
   <VPTeamMembers :members="members"/>
