@@ -34,7 +34,7 @@ export default {
                 repoId: 'R_kgDOOQrolQ',
                 category: 'General', // 默认: `General`
                 categoryId: 'DIC_kwDOOQrolc4Colvm',
-                mapping: 'pathname', // 默认: `pathname`
+                mapping: 'url', // 默认: `pathname`
                 inputPosition: 'top', // 默认: `top`
                 lang: 'zh-CN', // 默认: `zh-CN`
                 lightTheme: 'light', // 默认: `light`
