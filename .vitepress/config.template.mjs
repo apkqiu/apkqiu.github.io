@@ -56,6 +56,9 @@ export default defineConfig({
             message: "没意思的网站",
             copyright: "Copyright © 2025-present apkqiu"
         },
-        externalLinkIcon: true
+        externalLinkIcon: true,
+    },
+    markdown: {
+        lineNumbers: true
     }
 });

@@ -6,9 +6,6 @@ hero:
   name: “惠阴”新闻网
   text: 惠阴校园中你不知道的事情
   tagline: 其实是个个人小网站而已
-  image:
-    src: 📰
-    alt: Newspaper
   actions:
     - theme: brand
       text: “周恩来”报社（非官方）
@@ -62,6 +59,8 @@ const members = [
   }
 ]
 </script>
+
+
 
 <VPTeamPage>
   <VPTeamPageTitle>
