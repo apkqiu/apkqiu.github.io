@@ -7,15 +7,15 @@ import imageViewer from 'vitepress-plugin-image-viewer';
 import vImageViewer from 'vitepress-plugin-image-viewer/lib/vImageViewer.vue';
 import { NProgress } from 'nprogress-v2/dist/index.js' // 进度条组件
 import 'nprogress-v2/dist/index.css' // 进度条样式
-
+import MyLayout from './MyLayout.vue';
 //import Layout from './Layout.vue'
 import "./style.css"
 import "./bar-blur.css"
 
 
 export default {
-    ...DefaultTheme,
-    //Layout,
+    extends: DefaultTheme,
+    Layout: MyLayout,
     enhanceApp(ctx) {
         DefaultTheme.enhanceApp(ctx);
         ctx.app.component('vImageViewer', vImageViewer);
