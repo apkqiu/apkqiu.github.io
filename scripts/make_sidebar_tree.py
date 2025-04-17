@@ -37,11 +37,12 @@ def make_tree(dir):
     try:
         index_title = get_title(os.path.join(dir, "index.md"))
     except:
-        
         index_title = "未命名节点"
     if index_title is "index":
         index_title = "未命名节点"
     for file in os.listdir(dir):
+        if file.startswith("_"):
+            continue # hidden pages
         if os.path.isdir(os.path.join(dir, file)):
             current_tree.append(make_tree(os.path.join(dir, file)))
         elif file.endswith(".md"):

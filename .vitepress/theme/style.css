@@ -312,7 +312,7 @@
  * -------------------------------------------------------------------------- */
 
 :root {
-    --vp-layout-max-width: 1440px;
+    --vp-layout-max-width: 100%;
 }
 
 /**
@@ -587,4 +587,12 @@
     --vp-local-search-result-selected-border: var(--vp-c-brand-1);
     --vp-local-search-highlight-bg: var(--vp-c-brand-1);
     --vp-local-search-highlight-text: var(--vp-c-neutral-inverse);
+}
+
+th,
+td {
+    white-space: nowrap !important;
+    /* 不让th，td内容换行显示 */
+    width: 1%;
+    /* 强制均匀分配宽度 */
 }
