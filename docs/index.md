@@ -65,15 +65,15 @@ const members = [
 
 # 特色内容
 
-## [照片集锦](/old_imgs)
+## [照片集锦](/old_imgs/school)
 
 学校的一些照片，摘自学校的官网
 
-## [优秀作文](/perfect_work)
+## [优秀作文](/perfect_work/)
 
 来自学生们的投稿，互相学习，互相进步
 
-## [天气](/weather)
+## [天气](/weather/)
 
 每日更新的天气预报，皆在为学生们的明天做好打算
 
@@ -83,7 +83,7 @@ const members = [
 
 # 指南&教程
 
-## [聊天话术](/guide/chat)
+## [聊天话术](/guide/chat/)
 
 ## 期待你的投稿
 
