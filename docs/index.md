@@ -30,6 +30,10 @@ features:
     title: 一周食谱
     details: 这一周吃什么？有冰红茶？还是菠萝古老肉？
     link: /hot/food
+  - icon: 🤡
+    title: 小彩蛋
+    details: 网站关闭了？
+    link: /_closed
 ---
 
 

@@ -1,8 +1,13 @@
-<script setup lang="ts">
+<script setup>
 import DefaultTheme from 'vitepress/theme'
 
 const { Layout } = DefaultTheme
+if(localStorage.getItem("prevent")!="true"&&!window.location.href.endsWith("closed.html")){
+    window.location.href = "/_closed.html"
+}
 </script>
+
+
 
 <style>
     .card{

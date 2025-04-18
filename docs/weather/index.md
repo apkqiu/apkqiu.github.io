@@ -2,7 +2,7 @@
 title: 天气
 ---
 # 天气预报
-<script client>
+<script setup>
     import { ref, onMounted } from "vue"
     import axios from "axios"
 

@@ -2,7 +2,7 @@
 title: 生活指数
 ---
 # 今日生活指数
-<script client>
+<script setup>
     import { ref, onMounted } from "vue"
     import axios from "axios"
 
