@@ -14,12 +14,10 @@ next: false
 
 # 网站关闭
 
-<script setup>
-    import { ref, onMounted } from "vue"
+<script client>
     
-    onMounted(() => {
-        if(!globalThis.isBrowser)   return;
-
+    document.onload = function () {
+        
         const x = document.getElementById("x");
         if (localStorage.getItem("prevent") == "true") {
             var a = document.createElement("a")
@@ -68,7 +66,8 @@ next: false
             a.innerText = sayings[parseInt(Math.random() * 100) % 6] + ""
             x.appendChild(a)
         }
-    })
+                    }
+    
 </script>
 
 <p>开放时间待定</p>

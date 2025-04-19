@@ -2,15 +2,13 @@
 title: 天气
 ---
 # 天气预报
-<script setup>
-    import { ref, onMounted } from "vue"
+<script client>
+    
     import axios from "axios"
-if( globalThis.isBrowser){
-
-    onMounted(() => {
+    document.onload = function () {
+        
         console.log(`Test test`)
         const content = document.getElementById("content");
-    })
 
     axios({
         method: "post",
@@ -51,7 +49,9 @@ if( globalThis.isBrowser){
             console.log(val)
             content.appendChild(newrow)
         })
-    })}
+    })
+    }
+    
 </script>
 <table>
     <thead>

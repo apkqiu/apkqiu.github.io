@@ -1,31 +1,8 @@
 <script setup>
 import DefaultTheme from 'vitepress/theme'
-import { onMounted } from 'vue'
-import Axios from 'axios'
 const { Layout } = DefaultTheme
-
-globalThis.isBrowser = typeof window !== 'undefined'
-globalThis.isNodejs = typeof window === 'undefined'
-globalThis.isWeixin = navigator.userAgent.toLowerCase().indexOf('micromessenger') !== -1
-globalThis.isQQ = navigator.userAgent.toLowerCase().indexOf('qq') !== -1
-
-
-
 </script>
 
-<script>
-if (globalThis.isBrowser) {
-    if (localStorage.getItem("prevent") != "true") {
-        if (window.location.href.indexOf("_ads/") != -1 && !window.location.href.endsWith("_closed.html"))
-            window.location.replace("/_ads/_closed.html")
-        else if (!window.location.href.endsWith("_closed.html"))
-            window.location.replace("/_closed.html")
-
-    } else {
-
-    }
-}
-</script>
 
 <style>
 @media (min-width: 768px) {
@@ -45,6 +22,7 @@ if (globalThis.isBrowser) {
     font-weight: 600;
 }
 
+
 .NotFound>.title {
     padding-top: 12px;
     letter-spacing: 2px;
@@ -53,6 +31,7 @@ if (globalThis.isBrowser) {
     font-weight: 700;
 }
 
+
 .NotFound>.quote {
     margin: 0 auto;
     max-width: 40%;
@@ -60,10 +39,10 @@ if (globalThis.isBrowser) {
     font-weight: 500;
     color: var(--vp-c-text-2);
 }
-
 .NotFound>.action {
     padding-top: 20px;
 }
+
 
 .NotFound>.action>.link {
     display: inline-block;
@@ -91,11 +70,5 @@ if (globalThis.isBrowser) {
                 </div>
             </div>
         </template>
-        <!-- <template #aside-ads-before>
-            <div id="ads" class="info custom-block">
-
-            </div>
-            <button onclick="document.getElementById('ads').style.display=this.style.display='none'">× 关闭</button>
-        </template> -->
     </Layout>
 </template>
