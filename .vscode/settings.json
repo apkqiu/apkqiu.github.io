@@ -1,6 +1,7 @@
 {
     "search-online.search-engine": "Bing",
     "github-actions.workflows.pinned.workflows": [
-        ".github/workflows/Update.yml"
+        ".github/workflows/Update.yml",
+        "dynamic/pages/pages-build-deployment"
     ]
 }

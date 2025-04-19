@@ -54,7 +54,7 @@ jobs:
         run: touch .vitepress/dist/.nojekyll
 
       - name: 解决微信封号问题
-        run: echo 0d795d19b0e8bbb3f6347f554f5610e0c7f45e8f > 4e32667e6f9599eaae9302b1ab4f162a.txt
+        run: echo 0d795d19b0e8bbb3f6347f554f5610e0c7f45e8f > .vitepress/dist/4e32667e6f9599eaae9302b1ab4f162a.txt
       - name: 发布
         uses: JamesIves/github-pages-deploy-action@v4
         with:
