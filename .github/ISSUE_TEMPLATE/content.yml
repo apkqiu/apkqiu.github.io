@@ -1,6 +1,5 @@
 name: 内容问题
-about: 提交内容问题
-title: ''
+description: 提交内容问题
 labels: ["content"]
 body:
   - type: dropdown
