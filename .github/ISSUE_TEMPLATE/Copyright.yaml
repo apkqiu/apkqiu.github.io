@@ -1,6 +1,5 @@
 name: 版权问题
-about: 提交版权问题
-title: ''
+description : 提交版权问题
 labels: ["copyright"]
 body:
   - type: dropdown
