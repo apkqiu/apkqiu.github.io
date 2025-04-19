@@ -3,20 +3,26 @@ import yaml
 import json
 import string
 os.path.join = lambda x, y: x+"/"+y
+def split_frontmatter_content(content):
+    parts = content.split("---")
+    frontmatter = {}
+    if len(parts) > 1 and parts[0] == "":  # 有frontmatter
+        frontmatter = parts[1]
+        if frontmatter.startswith("{"):
+            frontmatter = json.loads(frontmatter)
+        else:
+            frontmatter = yaml.safe_load(frontmatter)
+        content = "---".join(parts[2:])
+    return (frontmatter, content)
+
 
 def get_title(file):
     with open(file, "r", encoding="utf-8") as f:
         content = f.read()
-        parts = content.split("---")
-        title = None
-        if len(parts) > 1 and parts[0] == "":  # 有frontmatter
-            frontmatter = parts[1]
-            if frontmatter.startswith("{"):
-                title = json.loads(frontmatter).get("title")
-            else:
-                title = yaml.safe_load(frontmatter).get("title")
+        front, content = split_frontmatter_content(content)
+        title = front.get("title")
         if title is None:
-            lines = parts[0].splitlines()
+            lines = content.splitlines()
 
             if len(lines) == 0:
                 title = file[file.rfind("/")+1:file.rfind(".")]
@@ -58,7 +64,9 @@ def make_tree(dir):
         elif file.endswith(".md"):
             if file == "index.md":
                 continue
-                    
+            if split_frontmatter_content(open(os.path.join(dir, file),encoding="utf8").read())[0].get("layout","doc")!="doc":
+                continue
+            
             current_tree.append(
                 {
                     "text": get_title(os.path.join(dir, file)),

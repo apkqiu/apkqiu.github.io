@@ -19,6 +19,9 @@
         box-shadow: 0 10px 30px 0 rgb(0 0 0 / 15%);
         background-color: transparent;
     }
+    .VPFeature:hover{
+        background-color: #eeeeee;
+    }
 
     /* 文档页侧边栏顶部透明 */
     .curtain {
