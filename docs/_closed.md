@@ -30,7 +30,7 @@ next: false
                 var key = parseInt(Math.random() * 1000000) + ""
                 key = (key+key+key+key+key+key).substr(0,6)
                 localStorage.setItem("restore", key);
-                alert("请牢记恢复密钥：" + key)
+                alert("请牢记密钥：" + key)
                 window.history.go(0)
             }
             b.innerText = "撤回访问权限"
@@ -48,7 +48,7 @@ next: false
             var key;
             a.onclick = () => {
                 
-                key = prompt("输入恢复密钥",key=="Soil Grass"?( localStorage.getItem("restore")):"");
+                key = prompt("输入密钥",key=="Soil Grass"?( localStorage.getItem("restore")):"");
                 if(key==null) return
                 if(key=="Soil Grass"&& localStorage.getItem("restore")==null){
                     key = localStorage.getItem("restore")
@@ -59,7 +59,7 @@ next: false
                     window.history.go(0)
                     return
                 }
-                alert("错误的恢复密钥")
+                alert("错误的密钥")
 
             }
             a.innerText = sayings[parseInt(Math.random() * 100) % 6] + ""

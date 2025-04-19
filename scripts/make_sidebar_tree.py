@@ -48,6 +48,8 @@ def has_content(file):
 def make_tree(dir):
     print(dir)
     dir = dir.replace("\\", "/")
+    if not os.path.exists(os.path.join(dir, "index.md")):
+        return
     # 查看markdown，查看frontmatter，查看title，没有就以第一行为准
     current_tree = []
     try:

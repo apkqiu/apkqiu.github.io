@@ -43,7 +43,7 @@ features:
     title: 优秀作文
     details: 来自学生们的投稿，互相学习，互相进步
     link: /perfect_work/
-  - icon: ☀
+  - icon: ⛅
     title: 天气
     details: 每日更新的天气预报，皆在为学生们的明天做好打算
     link: /weather/
@@ -95,3 +95,7 @@ const members = [
   </VPTeamPageTitle>
   <VPTeamMembers :members="members"/>
 </VPTeamPage>
+
+[声明&合法性](/_law)
+
+[为什么限制网站访问？](/_why)

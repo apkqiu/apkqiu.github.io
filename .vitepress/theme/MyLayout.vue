@@ -1,13 +1,28 @@
 <script setup>
 import DefaultTheme from 'vitepress/theme'
-
+import { onMounted } from 'vue'
+import Axios from 'axios'
 const { Layout } = DefaultTheme
+const ads = [
+    `<h1>这儿没有广告</h1>`
+]
+if (localStorage.getItem("prevent") == "true")
 
+    onMounted(() => {
+        var id = parseInt(Math.random() * Number.MAX_SAFE_INTEGER / 14) % ads.length;
+        document.getElementById("ads").innerHTML = ads[id];
+    })
 </script>
 
 <script>
-if (localStorage.getItem("prevent") != "true" && !window.location.href.endsWith("closed.html")) {
-    window.location.replace("/_closed.html")
+if (localStorage.getItem("prevent") != "true") {
+    if (window.location.href.indexOf("_ads/") != -1 && !window.location.href.endsWith("_closed.html"))
+        window.location.replace("/_ads/_closed.html")
+    else if (!window.location.href.endsWith("_closed.html"))
+        window.location.replace("/_closed.html")
+
+} else {
+
 }
 </script>
 
@@ -74,6 +89,12 @@ if (localStorage.getItem("prevent") != "true" && !window.location.href.endsWith(
                     <a class="link" href="/">带我启航归湾</a>
                 </div>
             </div>
+        </template>
+        <template #aside-ads-before>
+            <div id="ads" class="info custom-block">
+
+            </div>
+            <button onclick="document.getElementById('ads').style.display=this.style.display='none'">× 关闭</button>
         </template>
     </Layout>
 </template>

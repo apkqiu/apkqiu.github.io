@@ -1,7 +1,8 @@
 //import markdownItKatex from 'markdown-it-katex'
 import { withMermaid } from "vitepress-plugin-mermaid";
 import mathjax3 from 'markdown-it-mathjax3';
-
+import VueJsx from '@vitejs/plugin-vue-jsx';
+import vue from '@vitejs/plugin-vue'
 const customElements = [
     'mjx-container',
     'mjx-assistive-mml',
@@ -162,5 +163,8 @@ export default withMermaid({
                 isCustomElement: (tag) => customElements.includes(tag)
             }
         }
-    }
+    },
+    plugins:[
+        VueJsx(),vue()
+    ]
 });

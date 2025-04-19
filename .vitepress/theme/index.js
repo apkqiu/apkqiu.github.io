@@ -11,7 +11,6 @@ import MyLayout from './MyLayout.vue';
 //import Layout from './Layout.vue'
 import "./style.css"
 import "./bar-blur.css"
-
 export default {
     extends: DefaultTheme,
     Layout: MyLayout,
