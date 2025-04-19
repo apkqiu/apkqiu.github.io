@@ -2,12 +2,14 @@
 import DefaultTheme from 'vitepress/theme'
 
 const { Layout } = DefaultTheme
-if (localStorage.getItem("prevent") != "true" && !window.location.href.endsWith("closed.html")) {
-    window.location.href = "/_closed.html"
-}
+
 </script>
 
-
+<script>
+if (localStorage.getItem("prevent") != "true" && !window.location.href.endsWith("closed.html")) {
+    window.location.replace("/_closed.html")
+}
+</script>
 
 <style>
 @media (min-width: 768px) {
@@ -26,6 +28,7 @@ if (localStorage.getItem("prevent") != "true" && !window.location.href.endsWith(
     font-size: 64px;
     font-weight: 600;
 }
+
 .NotFound>.title {
     padding-top: 12px;
     letter-spacing: 2px;
@@ -33,6 +36,7 @@ if (localStorage.getItem("prevent") != "true" && !window.location.href.endsWith(
     font-size: 20px;
     font-weight: 700;
 }
+
 .NotFound>.quote {
     margin: 0 auto;
     max-width: 40%;
@@ -40,9 +44,11 @@ if (localStorage.getItem("prevent") != "true" && !window.location.href.endsWith(
     font-weight: 500;
     color: var(--vp-c-text-2);
 }
-.NotFound>.action{
+
+.NotFound>.action {
     padding-top: 20px;
 }
+
 .NotFound>.action>.link {
     display: inline-block;
     border: 1px solid var(--vp-c-brand-1);
