@@ -5,6 +5,7 @@ title: 天气
 <script setup>
     import { ref, onMounted } from "vue"
     import axios from "axios"
+if( typeof document !== 'undefined'){
 
     onMounted(() => {
         console.log(`Test test`)
@@ -50,7 +51,7 @@ title: 天气
             console.log(val)
             content.appendChild(newrow)
         })
-    })
+    })}
 </script>
 <table>
     <thead>

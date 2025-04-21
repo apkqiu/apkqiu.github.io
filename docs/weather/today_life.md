@@ -5,10 +5,11 @@ title: 生活指数
 <script setup>
     import { ref, onMounted } from "vue"
     import axios from "axios"
-
+if( typeof document !== 'undefined'){
     onMounted(() => {
         console.log(`Test test`)
-        const life = document.getElementById("life");
+        
+            const life = document.getElementById("life");
     })
     axios({
         method: "post",
@@ -26,7 +27,7 @@ title: 生活指数
             life.appendChild(value)
             life.appendChild(quote)
         })
-    })
+    })}
 </script>
 
 <div id="life"></div>

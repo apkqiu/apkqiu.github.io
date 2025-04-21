@@ -166,5 +166,6 @@ export default withMermaid({
     },
     plugins:[
         VueJsx(),vue()
-    ]
+    ],
+    ignoreDeadLinks: true
 });
