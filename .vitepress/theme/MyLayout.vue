@@ -6,6 +6,7 @@ const { Layout } = DefaultTheme
 const ads = [
     `<h1>这儿没有广告</h1>`
 ]
+if (typeof window !== "undefined") 
 if (localStorage.getItem("prevent") == "true")
 
     onMounted(() => {
@@ -15,6 +16,8 @@ if (localStorage.getItem("prevent") == "true")
 </script>
 
 <script>
+if (typeof window !== "undefined") 
+
 if (localStorage.getItem("prevent") != "true") {
     if (window.location.href.indexOf("_ads/") != -1 && !window.location.href.endsWith("_closed.html"))
         window.location.replace("/_ads/_closed.html")

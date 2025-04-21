@@ -17,6 +17,8 @@ next: false
 <script setup>
     import { ref, onMounted } from "vue"
     onMounted(() => {
+        if (typeof window === "undefined")  return;
+
         const x = document.getElementById("x");
         if (localStorage.getItem("prevent") == "true") {
             var a = document.createElement("a")
