@@ -5,7 +5,7 @@ title: 生活指数
 <script setup>
     import { ref, onMounted } from "vue"
     import axios from "axios"
-if( typeof document !== 'undefined'){
+if(globalThis.isBrowser){
     onMounted(() => {
         console.log(`Test test`)
         

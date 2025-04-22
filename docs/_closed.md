@@ -16,8 +16,9 @@ next: false
 
 <script setup>
     import { ref, onMounted } from "vue"
+    
     onMounted(() => {
-        if (typeof window === "undefined")  return;
+        if(!globalThis.isBrowser)   return;
 
         const x = document.getElementById("x");
         if (localStorage.getItem("prevent") == "true") {

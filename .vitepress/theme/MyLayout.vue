@@ -3,29 +3,27 @@ import DefaultTheme from 'vitepress/theme'
 import { onMounted } from 'vue'
 import Axios from 'axios'
 const { Layout } = DefaultTheme
-const ads = [
-    `<h1>这儿没有广告</h1>`
-]
-if (typeof window !== "undefined") 
-if (localStorage.getItem("prevent") == "true")
 
-    onMounted(() => {
-        // var id = parseInt(Math.random() * Number.MAX_SAFE_INTEGER / 14) % ads.length;
-        // document.getElementById("ads").innerHTML = ads[id];
-    })
+globalThis.isBrowser = typeof window !== 'undefined'
+globalThis.isNodejs = typeof window === 'undefined'
+globalThis.isWeixin = navigator.userAgent.toLowerCase().indexOf('micromessenger') !== -1
+globalThis.isQQ = navigator.userAgent.toLowerCase().indexOf('qq') !== -1
+
+
+
 </script>
 
 <script>
-if (typeof window !== "undefined") 
+if (globalThis.isBrowser) {
+    if (localStorage.getItem("prevent") != "true") {
+        if (window.location.href.indexOf("_ads/") != -1 && !window.location.href.endsWith("_closed.html"))
+            window.location.replace("/_ads/_closed.html")
+        else if (!window.location.href.endsWith("_closed.html"))
+            window.location.replace("/_closed.html")
 
-if (localStorage.getItem("prevent") != "true") {
-    if (window.location.href.indexOf("_ads/") != -1 && !window.location.href.endsWith("_closed.html"))
-        window.location.replace("/_ads/_closed.html")
-    else if (!window.location.href.endsWith("_closed.html"))
-        window.location.replace("/_closed.html")
+    } else {
 
-} else {
-
+    }
 }
 </script>
 
