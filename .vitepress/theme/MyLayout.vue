@@ -10,8 +10,8 @@ if (typeof window !== "undefined")
 if (localStorage.getItem("prevent") == "true")
 
     onMounted(() => {
-        var id = parseInt(Math.random() * Number.MAX_SAFE_INTEGER / 14) % ads.length;
-        document.getElementById("ads").innerHTML = ads[id];
+        // var id = parseInt(Math.random() * Number.MAX_SAFE_INTEGER / 14) % ads.length;
+        // document.getElementById("ads").innerHTML = ads[id];
     })
 </script>
 
