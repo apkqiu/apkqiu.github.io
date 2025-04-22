@@ -93,11 +93,11 @@ if (localStorage.getItem("prevent") != "true") {
                 </div>
             </div>
         </template>
-        <template #aside-ads-before>
+        <!-- <template #aside-ads-before>
             <div id="ads" class="info custom-block">
 
             </div>
             <button onclick="document.getElementById('ads').style.display=this.style.display='none'">× 关闭</button>
-        </template>
+        </template> -->
     </Layout>
 </template>
