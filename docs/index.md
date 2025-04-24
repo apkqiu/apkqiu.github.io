@@ -88,7 +88,7 @@ const members = [
 <br>
 
 
-<VPTeamPage>
+<VPTeamPage id="team">
   <VPTeamPageTitle>
     <template #title>
       制作团队
