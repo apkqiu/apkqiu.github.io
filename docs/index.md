@@ -52,9 +52,6 @@ features:
     details: 一些学习资料，供学生们参考
     link: https://apkqiu.github.io/knowledge/
 ---
-
-# 对2025-04-21 21:24至2025-04-22 20:14的停机，站长表示很抱歉
-
 <br>
 
 <script setup>
