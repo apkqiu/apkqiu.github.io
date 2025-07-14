@@ -100,7 +100,6 @@ export default withMermaid({
         hostname: "https://apkqiu.github.io"
     },
     themeConfig: {
-        notFound: '/404',
 
         // https://vitepress.dev/reference/default-theme-config
         nav: [!!nav],

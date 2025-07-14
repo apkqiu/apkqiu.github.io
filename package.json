@@ -2,7 +2,7 @@
   "scripts": {
     "docs:run": "vitepress dev",
     "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
+    "docs:preview": "vitepress build&&vitepress preview"
   },
   "dependencies": {
     "@vitejs/plugin-vue-jsx": "^4.1.2",
