@@ -1,9 +1,13 @@
 # “周恩来”报社
 
+> [官网：https://apkqiu.oc.com.ar/availability](https://apkqiu.oc.com.ar/availability)
+
 ## 稿件 
 
 ### PDF (官方)
 
+- [第1期](https://apkqiu.oc.com.ar/availability/zhoubao/zhoubao1.pdf)
+- [第2期](https://apkqiu.oc.com.ar/availability/zhoubao/zhoubao2.pdf)
 - [第3期](https://apkqiu.oc.com.ar/availability/zhoubao/zhoubao3.pdf)
 - [第4期](https://apkqiu.oc.com.ar/availability/zhoubao/zhoubao4.pdf)
 - [第5期](https://apkqiu.oc.com.ar/availability/zhoubao/zhoubao5.pdf)
