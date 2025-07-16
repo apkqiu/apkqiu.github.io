@@ -1,6 +1,18 @@
 # “周恩来”报社
 
-## 官方稿件 - 非官方优化
+## 稿件 
+
+### PDF (官方)
+
+- [第3期](https://apkqiu.oc.com.ar/availability/zhoubao/zhoubao3.pdf)
+- [第4期](https://apkqiu.oc.com.ar/availability/zhoubao/zhoubao4.pdf)
+- [第5期](https://apkqiu.oc.com.ar/availability/zhoubao/zhoubao5.pdf)
+- [第6期](https://apkqiu.oc.com.ar/availability/zhoubao/zhoubao6.pdf)
+- [第7期](https://apkqiu.oc.com.ar/availability/zhoubao/zhoubao7.pdf)
+- [第8期](https://apkqiu.oc.com.ar/availability/zhoubao/zhoubao8.pdf)
+- [第9期](https://apkqiu.oc.com.ar/availability/zhoubao/zhoubao9.pdf)
+
+### HTML (非官方)
 - [第5期](5)
     > 出版日期：2025/04/15
     >

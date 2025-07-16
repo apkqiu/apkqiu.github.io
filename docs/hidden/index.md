@@ -13,7 +13,7 @@ onMounted(() => {
     }
     window.mapping = {
         "furry":"/_furry_fusion",
-        "availability":availability,
+        "availability":loadtoavailability,
     }
     window.run_mapping = (value) => {
         if(value.startsWith("/")) {
