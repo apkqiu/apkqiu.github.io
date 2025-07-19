@@ -69,12 +69,23 @@ const members = [
     links: [
       { icon: 'github', link: 'https://github.com/apkqiu'},
       { icon: 'x', link: 'https://twitter.com/apkqiu' },
-      { icon: 'wechat', link: 'weixin://contacts/profile/HasPingLink' },
+      { icon: 'wechat', link: 'weixin://contacts/profile/PuroMas' },
       { icon: 'qq' , link: 'tencent://message/?uin=1145328374' },
       { icon: 'maildotru', link: 'mailto:apkqiu@qq.com' },
-      //{ icon: 'discord', link: 'https://discord.gg/' },
+      { icon: 'discord', link: 'https://discord.gg/apkqiu' },
     ]
   },
+  {
+    avatar: "https://avatars.githubusercontent.com/u/221084849",
+    name: "bantang32",
+    title: "“半糖一班”网站制作者",
+    links:[
+      { icon: 'github', link: 'https://github.com/bantang32' },
+      { icon: 'maildotru', link: 'mailto:Caixukun11451489@outlook.com' },
+      { icon: 'wechat', link: 'weixin://contacts/profile/Chaoxi11451454188' },
+      
+    ]
+  }
   {
     avatar:"https://cn.cravatar.com/avatar/?d=mp&s=512",
     name:"期待你的加入"
