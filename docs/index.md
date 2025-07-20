@@ -85,7 +85,7 @@ const members = [
       { icon: 'wechat', link: 'weixin://contacts/profile/Chaoxi11451454188' },
       
     ]
-  }
+  },
   {
     avatar:"https://cn.cravatar.com/avatar/?d=mp&s=512",
     name:"期待你的加入"
