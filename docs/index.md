@@ -73,6 +73,7 @@ const members = [
       { icon: 'qq' , link: 'tencent://message/?uin=1145328374' },
       { icon: 'maildotru', link: 'mailto:apkqiu@qq.com' },
       { icon: 'discord', link: 'https://discord.gg/apkqiu' },
+      { icon: "telegram", link: "https://t.me/apkqiu" },
     ]
   },
   {
@@ -95,9 +96,6 @@ const members = [
 <br>
 <br>
 
-# 你的话题
-
-- [防火长城是什么](/gfw)
 
 <VPTeamPage id="team">
   <VPTeamPageTitle>
