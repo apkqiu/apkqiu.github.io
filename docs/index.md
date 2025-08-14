@@ -8,6 +8,6 @@ layout: home
 
 欢迎拜访新站
 
-[新站](http://apkqiu.oc.com.ar/avalibility)
+[新站](http://apkqiu.oc.com.ar/availability/)
 
 [旧站](/old)
