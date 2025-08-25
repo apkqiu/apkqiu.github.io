@@ -23,6 +23,11 @@ features:
     details: 天下大事，事事关心
     link: /furry_fusion
     linkText: 查看
+  - icon: 📚
+    title: 自设
+    details: 画画能够治愈一切
+    link: /oc
+    linkText: 查看
   - icon: 💻
     title: 编程小屋
     details: 代码如诗，生活如歌
