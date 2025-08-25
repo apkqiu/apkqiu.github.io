@@ -8,13 +8,13 @@ hero:
   tagline: just 个人博客而已
   actions:
     - theme: brand
+      text: 洽隐山房
+      link: "https://apkqiu.oc.com.ar/availability/"
+    - theme: alt
       text: 看看？
       link: "#"
-    - theme: alt
-      text: 看看！
-      link: "#"
     - theme: sponsor
-      text: 看看。
+      text: 看看！
       link: "#"
 
 features:
