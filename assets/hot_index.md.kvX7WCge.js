@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a}from"./chunks/framework.DUQqqwoy.js";const l=JSON.parse('{"title":"热门话题","description":"","frontmatter":{"title":"热门话题"},"headers":[],"relativePath":"hot/index.md","filePath":"hot/index.md","lastUpdated":1766892219000}'),o={name:"hot/index.md"};function n(r,s,d,c,i,p){return a(),t("div")}const m=e(o,[["render",n]]);export{l as __pageData,m as default};
