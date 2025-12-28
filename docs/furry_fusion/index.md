@@ -1,7 +1,5 @@
 # 兽聚列表
 
-> 哇哦，你居然发现了这个页面！
-
 <script setup>
 import { onMounted } from 'vue'
 

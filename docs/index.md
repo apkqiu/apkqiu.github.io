@@ -3,21 +3,41 @@
 layout: home
 
 hero:
-  name: “惠阴”新闻网
-  text: 惠阴校园中你不知道的事情
+  name: 啸猫和蓝莓
+  text: 的生活日记
   tagline: 其实是个个人小网站而已
   actions:
     - theme: brand
-      text: “周恩来”报社（非官方）
-      link: /newspaper
+      text: 洽隐山房
+      link: https://apkqiu.oc.com.ar/availability/
     - theme: alt
-      text: 热门话题
-      link: /hot
+      text: 洽隐山房beta
+      link: https://apkqiu.oc.com.ar/avaliability_beta/
     - theme: sponsor
       text: Github
       link: https://github.com/apkqiu/apkqiu.github.io
 
 features:
+  - icon: 🦊
+    title: 兽聚列表
+    details: 天下大事，事事关心
+    link: /furry_fusion
+    linkText: 查看
+  - icon: 📚
+    title: 自设
+    details: 画画能够治愈一切
+    link: /oc
+    linkText: 查看
+  - icon: 💻
+    title: 编程小屋
+    details: 代码如诗，生活如歌
+    link: /coding
+    linkText: 查看
+  - icon: ☀
+    title: 有趣的事情
+    details: 每天都有新发现
+    link: /funny_things
+    linkText: 查看
   - icon: 📰
     title: 班级热点
     details: 班级最近有什么有趣的新闻？
@@ -53,6 +73,23 @@ features:
     link: https://apkqiu.github.io/knowledge/
 ---
 <br>
+
+# 欢迎来到我的博客！
+
+作者成分分析
+
+> 1. 技术佬
+> 2. 宅男
+> 3. 福瑞控
+
+----
+
+# 关于我
+
+你好，我是一个喜欢编程、动漫和福瑞的宅男，可以叫我“啸猫”，也可以叫我“蓝莓”。我的博客主要分享我的生活、编程和动漫心得。如果你也对这些感兴趣，欢迎来我的博客看看！
+
+这里包含了我的个人博客内容，也有以前的网站内容，欢迎访问！
+
 
 <script setup>
 import {
@@ -95,10 +132,6 @@ const members = [
 <br>
 <br>
 
-# 你的话题
-
-- [防火长城是什么](/gfw)
-
 <VPTeamPage id="team">
   <VPTeamPageTitle>
     <template #title>
@@ -111,7 +144,3 @@ const members = [
   <VPTeamMembers :members="members"/>
 </VPTeamPage>
 
-[声明&合法性](/_law)
-
-<!-- 
-[为什么限制网站访问？](/_why) -->
