@@ -7,12 +7,12 @@ hero:
   text: 的生活日记
   tagline: 其实是个个人小网站而已
   actions:
-    - theme: alt
+    - theme: brand
       text: 洽隐山房
-      link: https://apkqiu.oc.com.ar/avaliability_beta/
-    - theme: alt
-      text: 洽隐山房(稳定版)
       link: https://apkqiu.oc.com.ar/availability/
+    - theme: alt
+      text: 洽隐山房 · 浏览器主页
+      link: https://apkqiu.oc.com.ar/availability/quick_home
     - theme: sponsor
       text: Github
       link: https://github.com/apkqiu/apkqiu.github.io
